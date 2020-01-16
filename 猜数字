@@ -1,0 +1,25 @@
+class Solution 
+{
+public:
+	int game(vector<int>& guess, vector<int>& answer) 
+	{
+		int ret = 0;
+		vector<int>::iterator it1 = guess.begin();
+		vector<int>::iterator it2 = answer.begin();
+		if (guess.size() != 3 || answer.size() != 3)
+		{
+			ret = -1;
+			return ret;
+		}	
+		while (it1 != guess.end())
+		{
+			if (*it1 == *it2)
+			{
+				ret++;
+			}
+			it1++; 
+			it2++;
+		}
+		return ret;
+	}
+};

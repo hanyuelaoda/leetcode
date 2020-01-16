@@ -1,7 +1,3 @@
-#include<iostream>
-#include <vector>
-using namespace std;
-
 /*
 给你一个以行程长度编码压缩的整数列表 nums 。
 

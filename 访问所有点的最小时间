@@ -1,0 +1,26 @@
+class Solution 
+{
+public:
+	int minTimeToVisitAllPoints(vector<vector<int>>& points) 
+	{
+		int seconds = 0;
+		for (vector<vector<int>>::iterator it = points.begin(); it != points.end();)
+		{
+			vector<int> starting_points;//出发点
+			vector<int> end_points;//目的点
+			int x=0, y=0;
+			starting_points = *it;
+			it++;
+			if (it == points.end())
+			{
+				break;
+			}
+			end_points = *it;
+			//具体做法是分别将两点的x和y轴距离求出,然后取最大值
+			x = abs(end_points[0] - starting_points[0]);
+			y = abs(end_points[1] - starting_points[1]);
+			seconds += (x > y) ? x : y;
+		}
+		return seconds;
+	}
+};

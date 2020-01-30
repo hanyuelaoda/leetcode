@@ -21,7 +21,7 @@ public:
 		int min = 0;
 		for (char c : S)
 		{
-			if (S[i] == 'I')
+			if (c == 'I')
 			{
 				ret.push_back(min);
 				min++;

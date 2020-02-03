@@ -13,7 +13,7 @@ class Solution
 public:
 	int minDeletionSize(vector<string>& A)
 	{
-		vector<int> D;
+		int count = 0;
 		int column = A[0].size();
 		int row = A.size();
 		for (int i = 0; i < column; i++)
@@ -22,11 +22,11 @@ public:
 			{
 				if (A[j][i] > A[j + 1][i])
 				{
-					D.push_back(i);
+					count++;
 					break;
 				}
 			}
 		}
-		return D.size();
+		return count;
 	}
 };

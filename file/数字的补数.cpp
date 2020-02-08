@@ -1,5 +1,5 @@
 //两种方法的思路都一样
-//方法1则是用pow函数，方法2用左移完成
+//方法1则是用pow函数，速度较快
 class Solution1
 {
 public:
@@ -16,6 +16,7 @@ public:
 	}
 };
 
+//方法2用左移完成
 class Solution 
 {
 public:

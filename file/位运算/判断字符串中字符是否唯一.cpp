@@ -1,3 +1,6 @@
+//位运算
+
+//暴力法
 class Solution 
 {
 public:

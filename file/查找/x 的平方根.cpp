@@ -11,17 +11,17 @@
 */
 
 //二分法查找
-class Solution2
+class Solution
 {
 public:
 	int mySqrt(int x)
 	{
-		int l = 0, r = x / 2;
-		int ret = 0;
-		while (l <= r / 2)
+		int l = 0, r = x;
+		int ret = -1;
+		while (l <= r)
 		{
 			int mid = l + (r - l) / 2;
-			if (static_cast<long long>(mid*mid) <= x)
+			if (static_cast<long long>(mid)*mid <= x)
 			{
 				ret = mid;
 				l = mid + 1;
